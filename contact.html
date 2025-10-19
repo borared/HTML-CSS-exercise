@@ -1,0 +1,382 @@
+<!-- Write your code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      background: black;
+      color: white;
+    }
+
+    
+    #about {
+      background-color:white;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 8vh;
+      color: black;
+      position: relative;
+    }
+
+   #Navigation {
+       display: flex;
+       gap: 500px;
+       align-items: center;
+       color: black;
+       position: fixed;
+       width: 100%;      
+       z-index: 100;
+       padding: 0px 50px;     
+    }
+
+    #nav {
+      display: flex;
+      justify-content: end;
+      padding:0px 310px;
+      gap: 80px; 
+     
+      
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+
+    #nav a:hover {
+      text-decoration: underline;
+    }
+
+    #logo {
+      font-size: larger;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    #logo a{
+        text-decoration: none;
+        color:black;
+    }
+
+    #About {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: Black;
+      font-size: 35px;
+    }
+
+
+    
+    #menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: black;
+      z-index: 1000;
+    }
+
+
+    #description {
+      background: url(https://media.cntraveller.com/photos/611bec03ef6cd547152d6b56/16:9/w_2992,h_1683,c_limit/trendwatch_uummannaq_september_issue_-jessie.jpg)
+      no-repeat center center;
+      background-size: cover;
+      color: black;
+      padding: 150px 65px;
+      text-align: center;
+      min-height: 50vh;
+      margin-top: -150px;
+    }
+
+    #description h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    #description p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    #container{
+        display: flex;
+        justify-content: center;
+    }
+    #chat{
+        width: 500px;
+        height: 650px;
+        background:transparent;
+        backdrop-filter: blur(15px);
+        border: solid rgb(144, 147, 149);
+        margin-top: 20px;
+        border-radius: 25px;
+        color:white;
+    }
+    #chat h3{
+        text-align: left;
+        margin-left: 45px; 
+        padding-top: 10px;
+        font-size: 25px; 
+    }
+     #chat h4{
+        text-align: left;
+        margin-left: 45px; 
+        padding-top: 10px;
+        font-size: 25px; 
+    }
+    #username{
+        width: 400px;
+        height: 35px;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        color:white;
+        border-radius: 15px;
+        border: none;
+        padding: 0px 15px;
+    }
+    #username::placeholder {
+        color: white; 
+    }
+      #email{
+        width: 400px;
+        height: 35px;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        color:black;
+        border-radius: 15px;
+        border: none;
+        padding: 0px 15px;
+        margin-top: 15px;
+    }
+    #email::placeholder {
+        color: white; 
+    }
+    #message{
+        width: 400px;
+        height: 290px;
+        font-size: 17px;
+        font-family: 'Montserrat', sans-serif;
+        background: transparent;
+        border: solid rgb(144, 147, 149);
+        color:white;
+        border-radius: 15px;
+        padding: 10px 15px;
+        margin-top: -10px;
+    }
+    #container h4{
+        font-size: 20px;
+    }
+
+    #line1{
+        margin-top: -10px;
+        width: 415px;
+        margin-left: 50px;
+    }
+     #line2{
+        margin-top: -10px;
+        width: 415px;
+        margin-left: 50px;
+    }
+    #footer{
+        background-color: black;
+        color:white;
+        min-height: 50vh;
+        margin-top: -65px;
+    }
+    #footerHead{
+        display: flex;
+        gap: 250px;
+        padding: 35px 80px;
+        font-size: 15px;
+    }
+    #footerDis{
+        display: flex;
+        padding: 0px 80px;
+        gap: 180px
+    }
+    
+    #box1{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+    }
+    #box2{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+    }
+    #box3{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+        margin-left: -5px;
+    }
+    #box4{
+        width: 200px;
+        height: 200px;
+        color:rgb(144, 147, 149);
+        margin-top: -40px;
+        margin-left: -45px;
+    }
+    #line{
+        width: 1320px;
+         padding: 0px 80px;
+         font-size: 10px;       
+    }
+    #endFooter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:rgb(144, 147, 149);
+        font-size: 14px;
+    }
+ 
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+
+     
+      #nav {
+        display: none; 
+      }
+
+      #menu-icon {
+        display: block; 
+        color: white;
+      }
+
+      #logo p {
+        font-size: medium;
+      }
+    }
+
+    @media (max-width: 900px) {
+    #nav {
+         display: none; 
+        }
+    #menu-icon { 
+        display: block; color: black; 
+    }
+    }
+
+    @media (max-width: 1025px) {
+      #nav {
+        gap: 35px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section id="about">
+    <div id="Navigation">
+      <div id="logo">
+        <p><a href="home.html">©Mojo Design</a></p>
+      </div>
+
+      <div id="menu-icon">&#9776;</div>
+
+ 
+      <nav id="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+        
+      </nav>
+    </div>
+
+  </section>
+
+
+  <section id="description">
+    <h2>Ready to Build Something Incredible?</h2>
+    <p>
+     Let's discuss your next project. We're eager to bring your digital vision to life.
+    </p>
+    
+    <div id="container">
+        <div id="chat">
+            <h3>Let's get in touch</h3>
+            <form action="">
+                <div>
+                    <label> <input type="text" placeholder="Enter your full name" 
+                        id="username"></label>
+                        <div id="line1">
+                            <hr>
+                        </div>
+                </div>
+                <div>
+                    <label> <input type="email" placeholder="Enter your email address" 
+                        id="email"></label>
+                        <div id="line2">
+                            <hr>
+                        </div>
+                </div>
+                <h4>What is it about?</h4>
+                <div>
+                    <textarea name="sms" id="message">Tell me about your project...</textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+  </section>
+
+  <section id="footer">
+         <div id="footerHead">
+            <div>
+                <h3>©Mojo Design</h3>
+            </div>
+            <div>
+                <h3>Our Expertise</h3>
+            </div>
+            <div>
+                <h3>Company</h3>
+            </div>
+            <div>
+                <h3>Support</h3>
+            </div>
+         </div>
+         <div>
+
+            <div id="footerDis">
+                <div id="box1">
+                    <p>Design that deserve.</p>
+                </div>
+                <div id="box2">
+                    <p>Web Development <br> UI/UX Design <br>Branding & Identity</p>
+                </div>
+                <div id="box3">
+                    <p>About the Team <br>Client Success Stories <br>Blog / Insights</p>
+                </div>
+                <div id="box4">
+                    <p>Get a Free Quote <br>FAQ & Process <br>Terms & Privacy</p>
+                </div>
+            </div>
+            <div id="line">
+                <hr>
+            </div>
+            <div id="endFooter">
+                <p>©2025 Mojo Design. All rights reserved.</p>
+            </div>
+         </div>
+  </section>
+</body>
+</html>

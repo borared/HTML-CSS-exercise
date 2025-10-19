@@ -1,0 +1,377 @@
+<!-- Write your code here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      background: black;
+      color: white;
+    }
+
+  
+    #hero {
+      background: url(https://i.pinimg.com/1200x/d3/ea/93/d3ea9312c99f7d6bb274fc4eef357dd5.jpg)
+        no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh; 
+      color: black;
+      position: relative;
+    }
+
+   #Navigation {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 3px 65px;
+       color: black;
+       position: fixed;
+       width: 100%;       
+       z-index: 100;    
+    }
+
+    #nav {
+      display: flex;
+      gap: 75px;
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+
+    #nav a:hover {
+      text-decoration: underline;
+    }
+
+    #logo {
+      font-size: larger;
+      font-weight: 600;
+    }
+    #logo a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #welcome {
+      padding: 100px 65px;
+      font-size: 35px;
+    }
+
+    #welcomeText {
+      margin-top: -45px;
+      font-size: 35px;
+    }
+
+    #btn {
+      background-color: black;
+      color: white;
+      border-radius: 25px;
+      border: none;
+      width: 210px;
+      height: 50px;
+      font-size: 18px;
+      font-weight: normal;
+      position: relative;
+      top: -20px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #btn:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    #portfolio {
+      text-decoration: none;
+      color: white;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: black;
+      z-index: 1000;
+    }
+
+  
+    #description {
+      background-color: white;
+      color: black;
+      padding: 150px 65px;
+      text-align: center;
+      min-height: 100vh;
+      margin-top: -100px;
+    }
+
+    #description h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    #description p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    #work{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 800px;
+        background-color: black;
+        color: white;
+        margin-top: 100px;
+        margin: 0 auto; 
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    #containWork{
+        margin-top: 150px;
+    }
+    #mojoVideo{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #footer{
+        background-color: black;
+        color:white;
+        min-height: 50vh;
+    }
+    #footerHead{
+        display: flex;
+        gap: 250px;
+        padding: 35px 80px;
+        font-size: 15px;
+    }
+    #footerDis{
+        display: flex;
+        padding: 0px 80px;
+        gap: 180px
+    }
+    #box1{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+    }
+    #box2{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+    }
+    #box3{
+        width: 200px;
+        height: 200px;
+        color: rgb(144, 147, 149);
+        margin-top: -40px;
+        margin-left: -5px;
+    }
+    #box4{
+        width: 200px;
+        height: 200px;
+        color:rgb(144, 147, 149);
+        margin-top: -40px;
+        margin-left: -45px;
+    }
+    #line{
+        width: 1320px;
+         padding: 0px 80px;
+         font-size: 10px;       
+    }
+    #endFooter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:rgb(144, 147, 149);
+        font-size: 14px;
+    }
+ 
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+
+      #mojoVideo{
+        width: 100%;
+        height: 100%;
+        
+      }
+      #work{
+        height: 300px;
+        width: 100%;
+      }
+      #nav {
+        display: none; 
+      }
+
+      #menu-icon {
+        display: block; 
+        color: white;
+      }
+
+      #logo p {
+        font-size: medium;
+      }
+
+      #welcome {
+        padding: 200px 55px;
+      }
+
+      #welcome h1 {
+        font-size: 30px;
+      }
+
+      #welcomeText {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+
+      #btn {
+        width: 180px;
+        height: 45px;
+        font-size: 16px;
+        top: -10px;
+      }
+    }
+
+    @media (max-width: 900px) {
+    #nav {
+         display: none; 
+        }
+    #menu-icon { 
+        display: block; color: black; 
+    }
+    }
+
+    @media (max-width: 1025px) {
+      #nav {
+        gap: 35px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section id="hero">
+    <div id="Navigation">
+      <div id="logo">
+        <p><a href="home.html">©Mojo Design</a></p>
+      </div>
+
+      <div id="menu-icon">&#9776;</div>
+
+      <nav id="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="server.html">Server</a>
+      </nav>
+    </div>
+
+    <div id="welcome">
+      <div>
+        <h1>
+          WELCOME TO <br />
+          MOJO WORLD
+        </h1>
+        <p id="welcomeText">We dedicate to design with passion</p>
+      </div>
+      <button id="btn">
+        <a
+          href="https://red-bora-portfolio.vercel.app/"
+          id="portfolio"
+          target="_blank"
+          >See more about us</a
+        >
+      </button>
+    </div>
+  </section>
+
+
+  <section id="description">
+    <h2>Our Mission</h2>
+    <p>
+      At Mojo Design, we believe creativity is limitless. Our passion for
+      crafting unique, modern, and user-friendly designs drives everything we
+      do. Scroll further to explore our journey, vision, and the innovative
+      projects that define us.
+    </p>
+    
+    <div id="containWork">
+        <h2>Recently Work</h2>
+        <div id="work">
+              <video
+               id="mojoVideo"
+               autoPlay
+               loop
+               muted
+               playsInline
+               preload="auto"
+               crossOrigin="anonymous"
+               src="https://res.cloudinary.com/dicrvjstp/video/upload/v1760585543/MojoClothes_uwxd1s.mp4"
+              ></video>
+        </div>
+    </div>
+  </section>
+
+  <section id="footer">
+         <div id="footerHead">
+            <div>
+                <h3>©Mojo Design</h3>
+            </div>
+            <div>
+                <h3>Our Expertise</h3>
+            </div>
+            <div>
+                <h3>Company</h3>
+            </div>
+            <div>
+                <h3>Support</h3>
+            </div>
+         </div>
+         <div>
+
+            <div id="footerDis">
+                <div id="box1">
+                    <p>Design that deserve.</p>
+                </div>
+                <div id="box2">
+                    <p>Web Development <br> UI/UX Design <br>Branding & Identity</p>
+                </div>
+                <div id="box3">
+                    <p>About the Team <br>Client Success Stories <br>Blog / Insights</p>
+                </div>
+                <div id="box4">
+                    <p>Get a Free Quote <br>FAQ & Process <br>Terms & Privacy</p>
+                </div>
+            </div>
+            <div id="line">
+                <hr>
+            </div>
+            <div id="endFooter">
+                <p>©2025 Mojo Design. All rights reserved.</p>
+            </div>
+         </div>
+  </section>
+</body>
+</html>
